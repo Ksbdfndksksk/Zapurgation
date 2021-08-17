@@ -98,7 +98,7 @@ class TitleState extends MusicBeatState
 
 		logoBl = new FlxSprite(-200, -160);
 		logoBl.frames = Paths.getSparrowAtlas('TrickyLogo','clown');
-		logoBl.antialiasing = true;
+		logoBl.antialiasing = false;
 		logoBl.animation.addByPrefix('bump', 'Logo', 34);
 		logoBl.animation.play('bump');
 		logoBl.setGraphicSize(Std.int(logoBl.width * 2)); // 0.5
@@ -109,7 +109,7 @@ class TitleState extends MusicBeatState
 		gfDance = new FlxSprite(FlxG.width * 0.23, FlxG.height * 0.07);
 		gfDance.frames = Paths.getSparrowAtlas('DJ_Tricky','clown');
 		gfDance.animation.addByPrefix('dance', 'mixtape',24, true);
-		gfDance.antialiasing = true;
+		gfDance.antialiasing = false;
 		gfDance.setGraphicSize(Std.int(gfDance.width * 0.6));
 
 
@@ -117,14 +117,14 @@ class TitleState extends MusicBeatState
 		titleText.frames = Paths.getSparrowAtlas('titleEnter');
 		titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
 		titleText.animation.addByPrefix('press', "ENTER PRESSED", 24);
-		titleText.antialiasing = true;
+		titleText.antialiasing = false;
 		titleText.animation.play('idle');
 		titleText.updateHitbox();
 		// titleText.screenCenter(X);
 
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
 		logo.screenCenter();
-		logo.antialiasing = true;
+		logo.antialiasing = false;
 		// add(logo);
 
 		// FlxTween.tween(logoBl, {y: logoBl.y + 50}, 0.6, {ease: FlxEase.quadInOut, type: PINGPONG});
@@ -149,7 +149,7 @@ class TitleState extends MusicBeatState
 		ngSpr.updateHitbox();
 		ngSpr.screenCenter(X);
 		ngSpr.y -= 100;
-		ngSpr.antialiasing = true;
+		ngSpr.antialiasing = false;
 
 		actualNG= new FlxSprite(0, FlxG.height * 0.55).loadGraphic(Paths.image('newgrounds_logo','clown'));
 		actualNG.visible = false;
@@ -157,7 +157,7 @@ class TitleState extends MusicBeatState
 		actualNG.updateHitbox();
 		actualNG.screenCenter(X);
 		actualNG.y -= 70;
-		actualNG.antialiasing = true;
+		actualNG.antialiasing = false;
 
 		backupMen= new FlxSprite(0, FlxG.height * 0.55).loadGraphic(Paths.image('TheBackupMen','clown'));
 		backupMen.visible = false;
@@ -165,7 +165,7 @@ class TitleState extends MusicBeatState
 		backupMen.updateHitbox();
 		backupMen.screenCenter(X);
 		backupMen.y -= 100;
-		backupMen.antialiasing = true;
+		backupMen.antialiasing = false;
 
 
 		CachedFrames.loadEverything();
@@ -235,7 +235,7 @@ class TitleState extends MusicBeatState
 		persistentUpdate = true;
 
 		var bg:FlxSprite = new FlxSprite(-10,-10).loadGraphic(Paths.image('fourth/bg','clown'));
-		// bg.antialiasing = true;
+		// bg.antialiasing = false;
 		// bg.setGraphicSize(Std.int(bg.width * 0.6));
 		// bg.updateHitbox();
 
@@ -423,14 +423,14 @@ class TitleState extends MusicBeatState
 		switch (curBeat)
 		{
 			case 5:
-				createCoolText(['KadeDev'], 135);
+				createCoolText(['FrostzNeeko'], 135);
 			// credTextShit.visible = true;
 			case 6:
-				addMoreText('Banbuds', 135);
+				addMoreText('Beemax', 135);
 			case 7:
-				addMoreText('Cval', 135);
+				addMoreText('DCwars', 135);
 			case 8:
-				addMoreText('Rozebud', 135);
+				addMoreText('Mathesu', 135);
 			case 9:
 				ngSpr.visible = true;
 			// credTextShit.visible = false;
@@ -439,21 +439,21 @@ class TitleState extends MusicBeatState
 			case 10:
 				deleteCoolText();
 				ngSpr.visible = false;
-				createCoolText(['With help from'], 135);
+				createCoolText(['Com apoio externo de'], 135);
 			case 11:
-				addMoreText('MORO', 135);
+				addMoreText('Matheus Silver', 135);
 			case 12:
-				addMoreText('YingYang', 135);
+				addMoreText('Bright Zirimund', 135);
 			case 13:
-				addMoreText('Jads', 135);
+				addMoreText('LoreNYAW', 135);
 			case 14:
 				backupMen.visible = true;
 			case 15:
 				deleteCoolText();
-				createCoolText(['Newgrounds']);
+				createCoolText(['Feito por']);
 				backupMen.visible = false;
 			case 16:
-				addMoreText('is pog');
+				addMoreText('the aleks');
 				actualNG.visible = true;
 			case 17:
 				actualNG.visible = false;
@@ -487,14 +487,14 @@ class TitleState extends MusicBeatState
 				addMoreText(curWacky[1]);
 			case 27:
 				deleteCoolText();
-				createCoolText(['chicken dance remix']);
+				createCoolText(['meu deus alek']);
 			case 28:
-				addMoreText('by Tsuraran');
+				addMoreText('Correeeee');
 			case 30:
 				deleteCoolText();
-				createCoolText(['the drop']);
+				createCoolText(['Pois ele vai']);
 			case 31:
-				addMoreText('or smth lol');
+				addMoreText('PEGAR A MARREEETA');
 			case 32:
 				deleteCoolText();
 				skipIntro();

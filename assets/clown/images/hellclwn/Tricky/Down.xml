@@ -7,5 +7,5 @@
 	<SubTexture name="Proper Down0002" x="1198" y="0" width="599" height="604"/>
 	<SubTexture name="Proper Down0003" x="0" y="604" width="599" height="604"/>
 	<SubTexture name="Proper Down0004" x="599" y="604" width="599" height="604"/>
-	<SubTexture name="Proper Down0005" x="1198" y="604" width="599" height="604"/>
+	<SubTexture name="Proper Down0005" x="599" y="604" width="599" height="604"/>
 </TextureAtlas>

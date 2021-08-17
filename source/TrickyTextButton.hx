@@ -33,8 +33,8 @@ class TrickyTextButton extends FlxSprite
         spriteOne.setFormat("tahoma-bold.ttf",size,FlxColor.RED);
         spriteTwo.setFormat("tahoma-bold.ttf",size,FlxColor.WHITE);
 
-        spriteOne.antialiasing = true;
-        spriteTwo.antialiasing = true;
+        spriteOne.antialiasing = false;
+        spriteTwo.antialiasing = false;
         
         spriteTwo.alpha = 0;
     }

@@ -124,9 +124,9 @@ class MusicMenu extends MusicBeatState
         tapeJads.screenCenter();
         tapeYing.screenCenter();
 
-        tapeJads.antialiasing = true;
-        tapeRaze.antialiasing = true;
-        tapeYing.antialiasing = true;
+        tapeJads.antialiasing = false;
+        tapeRaze.antialiasing = false;
+        tapeYing.antialiasing = false;
 
         tapeRaze.setGraphicSize(Std.int(tapeRaze.width * 0.6));
         tapeJads.setGraphicSize(Std.int(tapeJads.width * 0.6));
@@ -142,8 +142,8 @@ class MusicMenu extends MusicBeatState
         circleOne = new FlxSprite().loadGraphic(Paths.image("menu/music/Circle1","clown"));
         circleTwo = new FlxSprite().loadGraphic(Paths.image("menu/music/Circle2","clown"));
 
-        circleOne.antialiasing = true;
-        circleTwo.antialiasing = true;
+        circleOne.antialiasing = false;
+        circleTwo.antialiasing = false;
 
         circleOne.setGraphicSize(Std.int(circleOne.width * 0.6));
         circleTwo.setGraphicSize(Std.int(circleTwo.width * 0.6));

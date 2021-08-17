@@ -71,6 +71,46 @@ class Option
 	public function right():Bool { return throw "stub!"; }
 }
 
+class BotPlay extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+	
+	public override function press():Bool
+	{
+		FlxG.save.data.botplay = !FlxG.save.data.botplay;
+		trace('BotPlay : ' + FlxG.save.data.botplay);
+		display = updateDisplay();
+		return true;
+	}
+	
+	private override function updateDisplay():String
+		return "BotPlay " + (FlxG.save.data.botplay ? "ligado" : "desligado");
+}
+
+class FlashingLightsOption extends Option
+{
+	public function new(desc:String)
+	{
+		super();
+		description = desc;
+	}
+	public override function press():Bool
+	{
+		FlxG.save.data.flashing = !FlxG.save.data.flashing;
+		display = updateDisplay();
+		return true;
+	}
+
+	private override function updateDisplay():String
+	{
+		return "Anti epilepsia " + (!FlxG.save.data.flashing ? "ligado" : "desligado");
+	}
+}
+
 class CustomControls extends Option
 {
 	public function new(desc:String)
@@ -85,7 +125,7 @@ class CustomControls extends Option
 	}
 	private override function updateDisplay():String
 	{
-		return "controls";
+		return "controles";
 	}
 
 }
@@ -103,7 +143,7 @@ class About extends Option
 	}
 	private override function updateDisplay():String
 	{
-		return "About";
+		return "info";
 	}
 
 }
@@ -128,7 +168,7 @@ class DFJKOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Key Bindings";
+		return "Config de teclado";
 	}
 }
 
@@ -170,7 +210,7 @@ class GhostTapOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return FlxG.save.data.ghost ? "Ghost Tapping" : "No Ghost Tapping";
+		return FlxG.save.data.ghost ? "New Input" : "Old Input";
 	}
 }
 
@@ -190,7 +230,7 @@ class AccuracyOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Accuracy " + (!FlxG.save.data.accuracyDisplay ? "off" : "on");
+		return "Precisao " + (!FlxG.save.data.accuracyDisplay ? "invisivel" : "visivel");
 	}
 }
 
@@ -210,7 +250,7 @@ class SongPositionOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Song Position " + (!FlxG.save.data.songPosition ? "off" : "on");
+		return "Marca tempo " + (!FlxG.save.data.songPosition ? "invisivel" : "visivel");
 	}
 }
 
@@ -230,7 +270,7 @@ class DistractionsAndEffectsOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Distractions " + (!FlxG.save.data.distractions ? "off" : "on");
+		return "distracoes " + (!FlxG.save.data.distractions ? "invisivel" : "visivel");
 	}
 }
 
@@ -252,7 +292,7 @@ class FPSOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "FPS Counter " + (!FlxG.save.data.fps ? "off" : "on");
+		return "FPS " + (!FlxG.save.data.fps ? "invisivel" : "visivel");
 	}
 }
 
@@ -395,7 +435,7 @@ class NPSDisplayOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "NPS Display " + (!FlxG.save.data.npsDisplay ? "off" : "on");
+		return "NPS " + (!FlxG.save.data.npsDisplay ? "invisivel" : "visivel");
 	}
 }
 
@@ -416,6 +456,6 @@ class AccuracyDOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return "Accuracy Mode: " + (FlxG.save.data.accuracyMod == 0 ? "Accurate" : "Complex");
+		return "Modo precisao: " + (FlxG.save.data.accuracyMod == 0 ? "preciso" : "Complexo");
 	}
 }

@@ -20,7 +20,7 @@ class OptionsMenu extends MusicBeatState
 
 	private var grpControls:FlxTypedGroup<Alphabet>;
 
-	var menuItems:Array<String> = ['controls', 'set fps', 'downscroll: off', 'About', 'test cutscene'];
+	var menuItems:Array<String> = ['controles', 'set fps', 'downscroll: true', 'Sobre'];
 
 	var UP_P:Bool;
 	var DOWN_P:Bool;
@@ -39,14 +39,14 @@ class OptionsMenu extends MusicBeatState
 		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));
 		menuBG.updateHitbox();
 		menuBG.screenCenter();
-		menuBG.antialiasing = true;
+		menuBG.antialiasing = false;
 		add(menuBG);
 
 		grpControls = new FlxTypedGroup<Alphabet>();
 		add(grpControls);
 
 		if (config.getdownscroll()){
-			menuItems[menuItems.indexOf('downscroll: off')] = 'downscroll: on';
+			menuItems[menuItems.indexOf('downscroll: Desligado')] = 'downscroll: Ligado';
 		}
 
 		for (i in 0...menuItems.length)
@@ -75,29 +75,22 @@ class OptionsMenu extends MusicBeatState
 
 			switch (daSelected)
 			{
-				case "controls":
+				case "Controles":
 					FlxG.switchState(new options.CustomControlsState());
 				
-				case "config":
+				case "configuracoes":
 					trace("hello");
 				
 				case "set fps":
 					insubstate = true;
 					openSubState(new options.SetFpsSubState());
 				
-				case "downscroll: on" | "downscroll: off":
+				case "downscroll: Ligado" | "downscroll: Desligado":
 					config.setdownscroll();
 					FlxG.resetState();
 				
-				case "About":
+				case "Sobre":
 					FlxG.switchState(new options.AboutState());
-				case "test cutscene":
-					//webview.openHTML(Assets.getBytes('assets/index.html'));
-					//webview.openURLfromAssets('index.html');
-					//FlxG.stage.width = 1600; 
-					//FlxG.stage.frameRate = 30;
-					//FlxG.stage;
-					//trace(FlxG.stage.width);
 					
 			}
 		}

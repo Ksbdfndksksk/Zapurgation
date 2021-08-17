@@ -259,7 +259,7 @@ class TrickyAlphaCharacter extends FlxSprite
 		var tex = Paths.getSparrowAtlas('menu/Alphabet','clown');
 		frames = tex;
 
-		antialiasing = true;
+		antialiasing = false;
 	}
 
 	public function selected(select)

@@ -21,7 +21,7 @@ class KadeEngineData
 			FlxG.save.data.offset = 0;
 
 		if (FlxG.save.data.songPosition == null)
-			FlxG.save.data.songPosition = false;
+			FlxG.save.data.songPosition = true;
 
 		if (FlxG.save.data.fps == null)
 			FlxG.save.data.fps = false;
@@ -37,7 +37,7 @@ class KadeEngineData
 			FlxG.save.data.fpsRain = false;
 
 		if (FlxG.save.data.fpsCap == null)
-			FlxG.save.data.fpsCap = 120;
+			FlxG.save.data.fpsCap = 60;
 
 		if (FlxG.save.data.fpsCap > 290 || FlxG.save.data.fpsCap < 60)
 			FlxG.save.data.fpsCap = 120; // baby proof so you can't hard lock ur copy of kade engine
@@ -55,25 +55,25 @@ class KadeEngineData
 			FlxG.save.data.accuracyMod = 1;
 
 		if (FlxG.save.data.watermark == null)
-			FlxG.save.data.watermark = true;
+			FlxG.save.data.watermark = false;
 
 		if (FlxG.save.data.ghost == null)
 			FlxG.save.data.ghost = true;
 
 		if (FlxG.save.data.distractions == null)
-			FlxG.save.data.distractions = true;
+			FlxG.save.data.distractions = false;
 
 		if (FlxG.save.data.flashing == null)
-			FlxG.save.data.flashing = true;
+			FlxG.save.data.flashing = false;
 		
 		if (FlxG.save.data.botplay == null)
 			FlxG.save.data.botplay = false;
 
 		if (FlxG.save.data.beatenHard == null)
-			FlxG.save.data.beatenHard = false;
+			FlxG.save.data.beatenHard = true;
 		
 		if (FlxG.save.data.beaten == null)
-			FlxG.save.data.beaten = false;
+			FlxG.save.data.beaten = true;
 
 		if (FlxG.save.data.beatEx == null)
 			FlxG.save.data.beatEx = false;

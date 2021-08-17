@@ -114,15 +114,15 @@ class FreeplayState extends MusicBeatState
 	function diffGet()
 	{
 		if (songs[selectedIndex].pognt == 'expurgation')
-			return "UNFAIR";
+			return ".        CORRE ALEK GARAI";
 		switch (diff)
 		{
 			case 0:
-				return "EASY";
+				return ".        FACIL";
 			case 1:
-				return "MEDIUM";
+				return ".        NORMAL";
 			case 2:
-				return "HARD";
+				return ".        HARDCORE MERMAO";
 		}
 		return "what";
 	}

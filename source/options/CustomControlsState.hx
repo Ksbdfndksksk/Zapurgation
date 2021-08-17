@@ -39,7 +39,7 @@ class CustomControlsState extends MusicBeatSubstate
 	var leftArrow:FlxSprite;
 	var rightArrow:FlxSprite;
 							//'hitbox',
-	var controlitems:Array<String> = ['right control', 'left control','keyboard','custom', 'hitbox'];
+	var controlitems:Array<String> = ['Controle Destro', 'Controle Canhoto','Teclado','Customizado', 'Hitbox'];
 
 	var curSelected:Int = 0;
 
@@ -63,7 +63,7 @@ class CustomControlsState extends MusicBeatSubstate
 		bg.setGraphicSize(Std.int(bg.width * 1.1));
 		bg.updateHitbox();
 		bg.screenCenter();
-		bg.antialiasing = true;
+		bg.antialiasing = false;
 
 		// load curSelected
 		curSelected = config.getcontrolmode();
@@ -95,10 +95,10 @@ class CustomControlsState extends MusicBeatSubstate
 
 
 		//text
-		up_text = new FlxText(200, 200, 0,"Button up x:" + _pad.buttonUp.x +" y:" + _pad.buttonUp.y, 24);
-		down_text = new FlxText(200, 250, 0,"Button down x:" + _pad.buttonDown.x +" y:" + _pad.buttonDown.y, 24);
-		left_text = new FlxText(200, 300, 0,"Button left x:" + _pad.buttonLeft.x +" y:" + _pad.buttonLeft.y, 24);
-		right_text = new FlxText(200, 350, 0,"Button right x:" + _pad.buttonRight.x +" y:" + _pad.buttonRight.y, 24);
+		up_text = new FlxText(200, 200, 0,"Cima Coordenadas x:" + _pad.buttonUp.x +" y:" + _pad.buttonUp.y, 24);
+		down_text = new FlxText(200, 250, 0,"Baixo Coordenadas x:" + _pad.buttonDown.x +" y:" + _pad.buttonDown.y, 24);
+		left_text = new FlxText(200, 300, 0,"Esquerda Coordenadas x:" + _pad.buttonLeft.x +" y:" + _pad.buttonLeft.y, 24);
+		right_text = new FlxText(200, 350, 0,"Direita Coordenadas x:" + _pad.buttonRight.x +" y:" + _pad.buttonRight.y, 24);
 		
 		//hitboxes
 
@@ -107,22 +107,22 @@ class CustomControlsState extends MusicBeatSubstate
 
 		// buttons
 
-		exitbutton = new FlxUIButton(FlxG.width - 650,25,"exit");
+		exitbutton = new FlxUIButton(FlxG.width - 650,25,"Sair");
 		exitbutton.resize(125,50);
 		exitbutton.setLabelFormat("VCR OSD Mono",24,FlxColor.BLACK,"center");
 
-		var savebutton = new FlxUIButton((exitbutton.x + exitbutton.width + 25),25,"exit and save",() -> {
+		var savebutton = new FlxUIButton((exitbutton.x + exitbutton.width + 25),25,"Sair e Salvar",() -> {
 			save();
 			FlxG.switchState(new OptionsMenu());
 		});
 		savebutton.resize(250,50);
 		savebutton.setLabelFormat("VCR OSD Mono",24,FlxColor.BLACK,"center");
 
-		exportbutton = new FlxUIButton(FlxG.width - 150, 25, "export", () -> { savetoclipboard(_pad); } );
+		exportbutton = new FlxUIButton(FlxG.width - 150, 25, "Exportar", () -> { savetoclipboard(_pad); } );
 		exportbutton.resize(125,50);
 		exportbutton.setLabelFormat("VCR OSD Mono", 24, FlxColor.BLACK,"center");
 
-		importbutton = new FlxUIButton(exportbutton.x, 100, "import", () -> { loadfromclipboard(_pad); });
+		importbutton = new FlxUIButton(exportbutton.x, 100, "Importar", () -> { loadfromclipboard(_pad); });
 		importbutton.resize(125,50);
 		importbutton.setLabelFormat("VCR OSD Mono", 24, FlxColor.BLACK,"center");
 
@@ -316,10 +316,10 @@ class CustomControlsState extends MusicBeatSubstate
 	}
 
 	function setbuttontexts() {
-		up_text.text = "Button up x:" + _pad.buttonUp.x +" y:" + _pad.buttonUp.y;
-		down_text.text = "Button down x:" + _pad.buttonDown.x +" y:" + _pad.buttonDown.y;
-		left_text.text = "Button left x:" + _pad.buttonLeft.x +" y:" + _pad.buttonLeft.y;
-		right_text.text = "Button right x:" + _pad.buttonRight.x +" y:" + _pad.buttonRight.y;
+		up_text.text = "Cima Coordenadas: X:" + _pad.buttonUp.x +" Y:" + _pad.buttonUp.y;
+		down_text.text = "Baixo Coordenada: X:" + _pad.buttonDown.x +" Y:" + _pad.buttonDown.y;
+		left_text.text = "Esquerda Coordenadas: X::" + _pad.buttonLeft.x +" Y:" + _pad.buttonLeft.y;
+		right_text.text = "Direita Coordenadas: X:" + _pad.buttonRight.x +" Y:" + _pad.buttonRight.y;
 	}
 
 

@@ -71,9 +71,9 @@ class PlayState extends MusicBeatState
 	private var vocals:FlxSound;
 
 	// tricky lines
-	public var TrickyLinesSing:Array<String> = ["SUFFER","INCORRECT", "INCOMPLETE", "INSUFFICIENT", "INVALID", "CORRECTION", "MISTAKE", "REDUCE", "ERROR", "ADJUSTING", "IMPROBABLE", "IMPLAUSIBLE", "MISJUDGED"];
-	public var ExTrickyLinesSing:Array<String> = ["YOU AREN'T HANK", "WHERE IS HANK", "HANK???", "WHO ARE YOU", "WHERE AM I", "THIS ISN'T RIGHT", "MIDGET", "SYSTEM UNRESPONSIVE", "WHY CAN'T I KILL?????"];
-	public var TrickyLinesMiss:Array<String> = ["TERRIBLE", "WASTE", "MISS CALCULTED", "PREDICTED", "FAILURE", "DISGUSTING", "ABHORRENT", "FORESEEN", "CONTEMPTIBLE", "PROGNOSTICATE", "DISPICABLE", "REPREHENSIBLE"];
+	public var TrickyLinesSing:Array<String> = ["TA LOCO", "HARDCORE", "SPIDOU", "SPRENGE", "E TROLAGI", "VACINA", "FROST PAIA", "ALEEEEEK", "SILVIO SANTOS", "GARAI", "TA DOIDO ALEK", "SPIDOU SPRENGE", "AAAAAAAAAAAAAA"];
+	public var ExTrickyLinesSing:Array<String> = ["AQUI E HARDCORE ALEK", "CADE A VACINA", "TA DOIDO???", "ALEEEK", "KD EU PORA", "AMOGUS", "XD", "BUGUEI AQ", "SUS?????"];
+	public var TrickyLinesMiss:Array<String> = ["AQUI É ", "AQ E HARDCORE", "PANI NU SIS", "AI", "TOMA NO SUS", "DISGOSTU", "ENFIA A MAO NO FUMIGUERO", "MANE", "ALEK", "BAGUI QUE GIRA", "KAIKE", "DC BUNITU"];
 
 	public static var dad:Character;
 	private var gf:Character;
@@ -268,7 +268,7 @@ class PlayState extends MusicBeatState
 			halloweenBG.animation.addByPrefix('idle', 'halloweem bg0');
 			halloweenBG.animation.addByPrefix('lightning', 'halloweem bg lightning strike', 24, false);
 			halloweenBG.animation.play('idle');
-			halloweenBG.antialiasing = true;
+			halloweenBG.antialiasing = false;
 			add(halloweenBG);
 
 			isHalloween = true;
@@ -297,7 +297,7 @@ class PlayState extends MusicBeatState
 				light.visible = false;
 				light.setGraphicSize(Std.int(light.width * 0.85));
 				light.updateHitbox();
-				light.antialiasing = true;
+				light.antialiasing = false;
 				phillyCityLights.add(light);
 			}
 
@@ -357,7 +357,7 @@ class PlayState extends MusicBeatState
 			limo.frames = limoTex;
 			limo.animation.addByPrefix('drive', "Limo stage", 24);
 			limo.animation.play('drive');
-			limo.antialiasing = true;
+			limo.antialiasing = false;
 
 			fastCar = new FlxSprite(-300, 160).loadGraphic(Paths.image('limo/fastCarLol'));
 			// add(limo);
@@ -369,7 +369,7 @@ class PlayState extends MusicBeatState
 			defaultCamZoom = 0.80;
 
 			var bg:FlxSprite = new FlxSprite(-1000, -500).loadGraphic(Paths.image('christmas/bgWalls'));
-			bg.antialiasing = true;
+			bg.antialiasing = false;
 			bg.scrollFactor.set(0.2, 0.2);
 			bg.active = false;
 			bg.setGraphicSize(Std.int(bg.width * 0.8));
@@ -379,14 +379,14 @@ class PlayState extends MusicBeatState
 			upperBoppers = new FlxSprite(-240, -90);
 			upperBoppers.frames = Paths.getSparrowAtlas('christmas/upperBop');
 			upperBoppers.animation.addByPrefix('bop', "Upper Crowd Bob", 24, false);
-			upperBoppers.antialiasing = true;
+			upperBoppers.antialiasing = false;
 			upperBoppers.scrollFactor.set(0.33, 0.33);
 			upperBoppers.setGraphicSize(Std.int(upperBoppers.width * 0.85));
 			upperBoppers.updateHitbox();
 			add(upperBoppers);
 
 			var bgEscalator:FlxSprite = new FlxSprite(-1100, -600).loadGraphic(Paths.image('christmas/bgEscalator'));
-			bgEscalator.antialiasing = true;
+			bgEscalator.antialiasing = false;
 			bgEscalator.scrollFactor.set(0.3, 0.3);
 			bgEscalator.active = false;
 			bgEscalator.setGraphicSize(Std.int(bgEscalator.width * 0.9));
@@ -394,14 +394,14 @@ class PlayState extends MusicBeatState
 			add(bgEscalator);
 
 			var tree:FlxSprite = new FlxSprite(370, -250).loadGraphic(Paths.image('christmas/christmasTree'));
-			tree.antialiasing = true;
+			tree.antialiasing = false;
 			tree.scrollFactor.set(0.40, 0.40);
 			add(tree);
 
 			bottomBoppers = new FlxSprite(-300, 140);
 			bottomBoppers.frames = Paths.getSparrowAtlas('christmas/bottomBop');
 			bottomBoppers.animation.addByPrefix('bop', 'Bottom Level Boppers', 24, false);
-			bottomBoppers.antialiasing = true;
+			bottomBoppers.antialiasing = false;
 			bottomBoppers.scrollFactor.set(0.9, 0.9);
 			bottomBoppers.setGraphicSize(Std.int(bottomBoppers.width * 1));
 			bottomBoppers.updateHitbox();
@@ -409,20 +409,20 @@ class PlayState extends MusicBeatState
 
 			var fgSnow:FlxSprite = new FlxSprite(-600, 700).loadGraphic(Paths.image('christmas/fgSnow'));
 			fgSnow.active = false;
-			fgSnow.antialiasing = true;
+			fgSnow.antialiasing = false;
 			add(fgSnow);
 
 			santa = new FlxSprite(-840, 150);
 			santa.frames = Paths.getSparrowAtlas('christmas/santa');
 			santa.animation.addByPrefix('idle', 'santa idle in fear', 24, false);
-			santa.antialiasing = true;
+			santa.antialiasing = false;
 			add(santa);
 		}
 		else if (SONG.song.toLowerCase() == 'winter-horrorland')
 		{
 			curStage = 'mallEvil';
 			var bg:FlxSprite = new FlxSprite(-400, -500).loadGraphic(Paths.image('christmas/evilBG'));
-			bg.antialiasing = true;
+			bg.antialiasing = false;
 			bg.scrollFactor.set(0.2, 0.2);
 			bg.active = false;
 			bg.setGraphicSize(Std.int(bg.width * 0.8));
@@ -430,12 +430,12 @@ class PlayState extends MusicBeatState
 			add(bg);
 
 			var evilTree:FlxSprite = new FlxSprite(300, -300).loadGraphic(Paths.image('christmas/evilTree'));
-			evilTree.antialiasing = true;
+			evilTree.antialiasing = false;
 			evilTree.scrollFactor.set(0.2, 0.2);
 			add(evilTree);
 
 			var evilSnow:FlxSprite = new FlxSprite(-200, 700).loadGraphic(Paths.image("christmas/evilSnow"));
-			evilSnow.antialiasing = true;
+			evilSnow.antialiasing = false;
 			add(evilSnow);
 		}
 		else if (SONG.song.toLowerCase() == 'senpai' || SONG.song.toLowerCase() == 'roses')
@@ -573,7 +573,7 @@ class PlayState extends MusicBeatState
 			defaultCamZoom = 0.75;
 			curStage = 'nevada';
 
-			tstatic.antialiasing = true;
+			tstatic.antialiasing = false;
 			tstatic.scrollFactor.set(0,0);
 			tstatic.setGraphicSize(Std.int(tstatic.width * 8.3));
 			tstatic.animation.add('static', [0, 1, 2], 24, true);
@@ -584,7 +584,7 @@ class PlayState extends MusicBeatState
 			var bg:FlxSprite = new FlxSprite(-350, -300).loadGraphic(Paths.image('red','clown'));
 			// bg.setGraphicSize(Std.int(bg.width * 2.5));
 			// bg.updateHitbox();
-			bg.antialiasing = true;
+			bg.antialiasing = false;
 			bg.scrollFactor.set(0.9, 0.9);
 			var stageFront:FlxSprite;
 			if (SONG.song.toLowerCase() != 'madness')
@@ -596,7 +596,7 @@ class PlayState extends MusicBeatState
 				stageFront = new FlxSprite(-1100, -460).loadGraphic(Paths.image('island_but_rocks_float','clown'));
 
 			stageFront.setGraphicSize(Std.int(stageFront.width * 1.4));
-			stageFront.antialiasing = true;
+			stageFront.antialiasing = false;
 			stageFront.scrollFactor.set(0.9, 0.9);
 			stageFront.active = false;
 			add(stageFront);
@@ -606,7 +606,7 @@ class PlayState extends MusicBeatState
 			MAINLIGHT.setGraphicSize(Std.int(MAINLIGHT.width * 0.9));
 			MAINLIGHT.blend = "screen";
 			MAINLIGHT.updateHitbox();
-			MAINLIGHT.antialiasing = true;
+			MAINLIGHT.antialiasing = false;
 			MAINLIGHT.scrollFactor.set(1.2, 1.2);
 		}
 		else if (SONG.song.toLowerCase() == 'hellclown')
@@ -615,7 +615,7 @@ class PlayState extends MusicBeatState
 			defaultCamZoom = 0.35;
 			curStage = 'nevadaSpook';
 
-			tstatic.antialiasing = true;
+			tstatic.antialiasing = false;
 			tstatic.scrollFactor.set(0,0);
 			tstatic.setGraphicSize(Std.int(tstatic.width * 10));
 			tstatic.screenCenter(Y);
@@ -626,7 +626,7 @@ class PlayState extends MusicBeatState
 
 
 			var bg:FlxSprite = new FlxSprite(-1000, -1000).loadGraphic(Paths.image('fourth/bg','clown'));
-			bg.antialiasing = true;
+			bg.antialiasing = false;
 			bg.scrollFactor.set(0.9, 0.9);
 			bg.setGraphicSize(Std.int(bg.width * 5));
 			bg.active = false;
@@ -634,7 +634,7 @@ class PlayState extends MusicBeatState
 
 			var stageFront:FlxSprite = new FlxSprite(-2000, -400).loadGraphic(Paths.image('hellclwn/island_but_red','clown'));
 			stageFront.setGraphicSize(Std.int(stageFront.width * 2.6));
-			stageFront.antialiasing = true;
+			stageFront.antialiasing = false;
 			stageFront.scrollFactor.set(0.9, 0.9);
 			stageFront.active = false;
 			add(stageFront);
@@ -645,7 +645,7 @@ class PlayState extends MusicBeatState
 			hank.animation.play('dance');
 			hank.scrollFactor.set(0.9, 0.9);
 			hank.setGraphicSize(Std.int(hank.width * 1.55));
-			hank.antialiasing = true;
+			hank.antialiasing = false;
 			
 
 			add(hank);
@@ -656,7 +656,7 @@ class PlayState extends MusicBeatState
 			defaultCamZoom = 0.55;
 			curStage = 'auditorHell';
 
-			tstatic.antialiasing = true;
+			tstatic.antialiasing = false;
 			tstatic.scrollFactor.set(0,0);
 			tstatic.setGraphicSize(Std.int(tstatic.width * 8.3));
 			tstatic.animation.add('static', [0, 1, 2], 24, true);
@@ -665,31 +665,31 @@ class PlayState extends MusicBeatState
 			tstatic.alpha = 0;
 
 			var bg:FlxSprite = new FlxSprite(-10, -10).loadGraphic(Paths.image('fourth/bg','clown'));
-			bg.antialiasing = true;
+			bg.antialiasing = false;
 			bg.scrollFactor.set(0.9, 0.9);
 			bg.active = false;
 			bg.setGraphicSize(Std.int(bg.width * 4));
 			add(bg);
 
-			hole.antialiasing = true;
+			hole.antialiasing = false;
 			hole.scrollFactor.set(0.9, 0.9);
 					
-			converHole.antialiasing = true;
+			converHole.antialiasing = false;
 			converHole.scrollFactor.set(0.9, 0.9);
 			converHole.setGraphicSize(Std.int(converHole.width * 1.3));
 			hole.setGraphicSize(Std.int(hole.width * 1.55));
 
-			cover.antialiasing = true;
+			cover.antialiasing = false;
 			cover.scrollFactor.set(0.9, 0.9);
 			cover.setGraphicSize(Std.int(cover.width * 1.55));
 
 			var energyWall:FlxSprite = new FlxSprite(1350,-690).loadGraphic(Paths.image("fourth/Energywall","clown"));
-			energyWall.antialiasing = true;
+			energyWall.antialiasing = false;
 			energyWall.scrollFactor.set(0.9, 0.9);
 			add(energyWall);
 			
 			var stageFront:FlxSprite = new FlxSprite(-350, -355).loadGraphic(Paths.image('fourth/daBackground','clown'));
-			stageFront.antialiasing = true;
+			stageFront.antialiasing = false;
 			stageFront.scrollFactor.set(0.9, 0.9);
 			stageFront.setGraphicSize(Std.int(stageFront.width * 1.55));
 			add(stageFront);
@@ -699,7 +699,7 @@ class PlayState extends MusicBeatState
 			defaultCamZoom = 0.9;
 			curStage = 'stage';
 			var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback'));
-			bg.antialiasing = true;
+			bg.antialiasing = false;
 			bg.scrollFactor.set(0.9, 0.9);
 			bg.active = false;
 			add(bg);
@@ -707,7 +707,7 @@ class PlayState extends MusicBeatState
 			var stageFront:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront'));
 			stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 			stageFront.updateHitbox();
-			stageFront.antialiasing = true;
+			stageFront.antialiasing = false;
 			stageFront.scrollFactor.set(0.9, 0.9);
 			stageFront.active = false;
 			add(stageFront);
@@ -715,7 +715,7 @@ class PlayState extends MusicBeatState
 			var stageCurtains:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains'));
 			stageCurtains.setGraphicSize(Std.int(stageCurtains.width * 0.9));
 			stageCurtains.updateHitbox();
-			stageCurtains.antialiasing = true;
+			stageCurtains.antialiasing = false;
 			stageCurtains.scrollFactor.set(1.3, 1.3);
 			stageCurtains.active = false;
 
@@ -1260,7 +1260,7 @@ class PlayState extends MusicBeatState
 		gramlan.animation.addByIndices('hold','HP Gremlin ANIMATION',[25,26,27,28],"",24);
 		gramlan.animation.addByIndices('release','HP Gremlin ANIMATION',[29,30,31,32,33],"",24,false);
 
-		gramlan.antialiasing = true;
+		gramlan.antialiasing = false;
 
 		add(gramlan);
 
@@ -1324,7 +1324,7 @@ class PlayState extends MusicBeatState
 						{
 							trace('oh shit');
 							gramlan.animation.play('release');
-							if (persist && totalDamageTaken >= 0.7)
+							if (persist && totalDamageTaken >= 0.3)
 								health -= totalDamageTaken; // just a simple if you take a lot of damage wtih this, you'll loose probably.
 							gramlan.animation.finishCallback = function(pog:String) { remove(gramlan);}
 							grabbed = false;
@@ -1465,7 +1465,7 @@ class PlayState extends MusicBeatState
 			var animation:FlxSprite = new FlxSprite(200,300); // create the fuckin thing
 
 			animation.frames = Paths.getSparrowAtlas('trickman','clown'); // add animation from sparrow
-			animation.antialiasing = true;
+			animation.antialiasing = false;
 			animation.animation.addByPrefix('cut1','Cutscene 1', 24, false);
 			animation.animation.addByPrefix('cut2','Cutscene 2', 24, false);
 			animation.animation.addByPrefix('cut3','Cutscene 3', 24, false);
@@ -1553,7 +1553,7 @@ class PlayState extends MusicBeatState
 						trace('playin cut cuz its funny lol!!!');
 						animation.animation.play("cut1");
 						resetSpookyText = false;
-						createSpookyText('YOU DO NOT KILL CLOWN', 260, FlxG.height * 0.9);
+						createSpookyText('ALEK NAO DESISTIR', 260, FlxG.height * 0.9);
 					}
 
 					if (!animation.animation.finished)
@@ -1589,7 +1589,7 @@ class PlayState extends MusicBeatState
 							case 'cut3':
 								animation.animation.play('cut4');
 								resetSpookyText = false;
-								createSpookyText('CLOWN KILLS YOU!!!!!!', 260, FlxG.height * 0.9);
+								createSpookyText('DESISTIR NAO SER HARDCORE', 260, FlxG.height * 0.9);
 								animation.x -= 100;
 							case 'cut4':
 								resetSpookyTextManual();
@@ -1644,7 +1644,7 @@ class PlayState extends MusicBeatState
 			
 			trans = new FlxSprite(-400,-760);
 			trans.frames = Paths.getSparrowAtlas('Jaws','clown');
-			trans.antialiasing = true;
+			trans.antialiasing = false;
 
 			trans.animation.addByPrefix("Close","Jaws smol", 24, false);
 			
@@ -1678,11 +1678,11 @@ class PlayState extends MusicBeatState
 			remove(boyfriend);
 			var nevada:FlxSprite = new FlxSprite(260,FlxG.height * 0.7);
 			nevada.frames = Paths.getSparrowAtlas('somewhere','clown'); // add animation from sparrow
-			nevada.antialiasing = true;
+			nevada.antialiasing = false;
 			nevada.animation.addByPrefix('nevada', 'somewhere idfk', 24, false);
 			var animation:FlxSprite = new FlxSprite(-50,200); // create the fuckin thing
 			animation.frames = Paths.getSparrowAtlas('intro','clown'); // add animation from sparrow
-			animation.antialiasing = true;
+			animation.antialiasing = false;
 			animation.animation.addByPrefix('fuckyou','Symbol', 24, false);
 			animation.setGraphicSize(Std.int(animation.width * 1.2));
 			nevada.setGraphicSize(Std.int(nevada.width * 0.5));
@@ -1776,7 +1776,7 @@ class PlayState extends MusicBeatState
 									if (!playonce)
 									{
 										resetSpookyText = false;
-										createSpookyText('OMFG CLOWN!!!!', 260, FlxG.height * 0.9);
+										createSpookyText('EITA ALEK!!!!', 260, FlxG.height * 0.9);
 										playonce = true;
 									}
 									cloth.play();
@@ -2200,7 +2200,7 @@ class PlayState extends MusicBeatState
 					babyArrow.animation.addByPrefix('purple', 'arrowLEFT');
 					babyArrow.animation.addByPrefix('red', 'arrowRIGHT');
 
-					babyArrow.antialiasing = true;
+					babyArrow.antialiasing = false;
 					babyArrow.setGraphicSize(Std.int(babyArrow.width * 0.7));
 
 					switch (Math.abs(i))
@@ -2783,11 +2783,6 @@ class PlayState extends MusicBeatState
 
 				LoadingState.loadAndSwitchState(new VideoState("assets/videos/TricksterMan",new MainMenuState()));
 
-				if (storyDifficulty == 2)
-					FlxG.save.data.beatenHard = true;
-				if (storyDifficulty >= 1)
-					FlxG.save.data.beaten = true;
-
 				FlxG.save.data.weekUnlocked = StoryMenuState.weekUnlocked;
 				FlxG.save.flush();
 			}
@@ -2968,9 +2963,9 @@ class PlayState extends MusicBeatState
 			if (!curStage.startsWith('school'))
 			{
 				rating.setGraphicSize(Std.int(rating.width * 0.7));
-				rating.antialiasing = true;
+				rating.antialiasing = false;
 				comboSpr.setGraphicSize(Std.int(comboSpr.width * 0.7));
-				comboSpr.antialiasing = true;
+				comboSpr.antialiasing = false;
 			}
 			else
 			{
@@ -3008,7 +3003,7 @@ class PlayState extends MusicBeatState
 
 				if (!curStage.startsWith('school'))
 				{
-					numScore.antialiasing = true;
+					numScore.antialiasing = false;
 					numScore.setGraphicSize(Std.int(numScore.width * 0.5));
 				}
 				else

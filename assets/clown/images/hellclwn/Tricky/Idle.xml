@@ -2,16 +2,16 @@
 <TextureAtlas imagePath="Idle.png">
 	<!-- Created with Adobe Animate version 20.5.1.31044 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Phase 3 Tricky Idle0000" x="3246" y="0" width="537" height="711"/>
-	<SubTexture name="Phase 3 Tricky Idle0001" x="0" y="708" width="537" height="711"/>
-	<SubTexture name="Phase 3 Tricky Idle0002" x="537" y="708" width="537" height="711"/>
-	<SubTexture name="Phase 3 Tricky Idle0003" x="1074" y="708" width="537" height="711"/>
-	<SubTexture name="Phase 3 Tricky Idle0004" x="1611" y="708" width="537" height="711"/>
-	<SubTexture name="Phase 3 Tricky Idle0005" x="2148" y="708" width="537" height="711"/>
+	<SubTexture name="Phase 3 Tricky Idle0000" x="0" y="0" width="541" height="708"/>
+	<SubTexture name="Phase 3 Tricky Idle0001" x="541" y="0" width="541" height="708"/>
+	<SubTexture name="Phase 3 Tricky Idle0002" x="1082" y="0" width="541" height="708"/>
+	<SubTexture name="Phase 3 Tricky Idle0003" x="0" y="708" width="537" height="711"/>
+	<SubTexture name="Phase 3 Tricky Idle0004" x="537" y="708" width="537" height="711"/>
+	<SubTexture name="Phase 3 Tricky Idle0005" x="1074" y="708" width="537" height="711"/>
 	<SubTexture name="Phase 3 Tricky Idle0006" x="0" y="0" width="541" height="708"/>
 	<SubTexture name="Phase 3 Tricky Idle0007" x="541" y="0" width="541" height="708"/>
 	<SubTexture name="Phase 3 Tricky Idle0008" x="1082" y="0" width="541" height="708"/>
-	<SubTexture name="Phase 3 Tricky Idle0009" x="1623" y="0" width="541" height="708"/>
-	<SubTexture name="Phase 3 Tricky Idle0010" x="2164" y="0" width="541" height="708"/>
-	<SubTexture name="Phase 3 Tricky Idle0011" x="2705" y="0" width="541" height="708"/>
+	<SubTexture name="Phase 3 Tricky Idle0009" x="0" y="708" width="537" height="711"/>
+	<SubTexture name="Phase 3 Tricky Idle0010" x="537" y="708" width="537" height="711"/>
+	<SubTexture name="Phase 3 Tricky Idle0011" x="1074" y="708" width="537" height="711"/>
 </TextureAtlas>

@@ -43,8 +43,8 @@ class TrickyButton extends FlxSprite
         spriteOne = new FlxSprite(trueX + tweenX, trueY + tweenY).loadGraphic(Paths.image(pngOne,"clown"));
         spriteTwo = new FlxSprite(trueX + tweenX, trueY + tweenY).loadGraphic(Paths.image(pngTwo,"clown"));
 
-        spriteOne.antialiasing = true;
-        spriteTwo.antialiasing = true;
+        spriteOne.antialiasing = false;
+        spriteTwo.antialiasing = false;
         
         spriteTwo.alpha = 0;
     }

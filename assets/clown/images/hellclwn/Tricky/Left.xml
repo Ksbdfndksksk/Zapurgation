@@ -7,5 +7,5 @@
 	<SubTexture name="Proper Left0002" x="633" y="0" width="633" height="735"/>
 	<SubTexture name="Proper Left0003" x="1266" y="0" width="633" height="735"/>
 	<SubTexture name="Proper Left0004" x="633" y="735" width="633" height="735"/>
-	<SubTexture name="Proper Left0005" x="1266" y="735" width="633" height="735"/>
+	<SubTexture name="Proper Left0005" x="633" y="735" width="633" height="735"/>
 </TextureAtlas>

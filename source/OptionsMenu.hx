@@ -22,32 +22,21 @@ class OptionsMenu extends MusicBeatState
 	var options:Array<OptionCatagory> = [
 		new OptionCatagory("Gameplay", [
 			new DFJKOption(controls),
-			new GhostTapOption("Ghost Tapping is when you tap a direction and it doesn't give you a miss."),
-			#if desktop
-			new FPSCapOption("Cap your FPS (Left for -10, Right for +10. SHIFT to go faster)"),
-			#end
-			new ScrollSpeedOption("Change your scroll speed (Left for -0.1, right for +0.1. If it's at 1, it will be chart dependent)"),
-			new AccuracyDOption("Change how accuracy is calculated. (Accurate = Simple, Complex = Milisecond Based)"),
+			new GhostTapOption("Não preciso explicar, apenas preciso perguntar: tanka um desafio?"),
+			new AccuracyDOption("Muda como a precisão é calculada. (Preciso = Simples, Complexo = Milisegundos)"),
 		]),
-		new OptionCatagory("Appearance", [
-			#if desktop
-			new AccuracyOption("Display accuracy information."),
-			new NPSDisplayOption("Shows your current Notes Per Second."),
-			new SongPositionOption("Show the songs current position (as a bar)"),
-			new DownscrollOption("Change the layout of the strumline.")
-			#else
-			new DistractionsAndEffectsOption("Toggle stage distractions that can hinder your gameplay.")
-			#end
-		]),
-		
-		new OptionCatagory("Misc", [
-			new FPSOption("Toggle the FPS Counter")
-		]),
+		new OptionCatagory("Aparencia", [
+			new AccuracyOption("Mostra informações sobre a precisão"),
+			new NPSDisplayOption("Mostra a quantidade de notas vindo por segundo"),
+			new SongPositionOption("Mostra a sua posição na música (como uma barra)"),
+			new DownscrollOption("Muda a direção das setas"),
+			new DistractionsAndEffectsOption("Esconde as distrações do cenário durante a gameplay"),
 
-		new OptionCatagory("Mobile settings", [
-			new CustomControls("edit a control"),
-			new About("about android port")
-		])
+		])#if mobileC ,
+
+		new OptionCatagory("Mobile", [
+			new CustomControls("Customize seus controles"),
+		]) #end
 
 		
 	];
@@ -102,7 +91,7 @@ class OptionsMenu extends MusicBeatState
 
 		currentOptions[0].color = FlxColor.WHITE;
 
-		offsetPog = new FlxText(125,600,0,"Offset: " + FlxG.save.data.offset);
+		offsetPog = new FlxText(125,600,0,"			Por the Aleks e Team Silver: ");
 		offsetPog.setFormat("tahoma-bold.ttf",42,FlxColor.RED);
 		add(offsetPog);
 
@@ -239,7 +228,7 @@ class OptionsMenu extends MusicBeatState
 					}
 			}
 
-			offsetPog.text = "Offset: " + FlxG.save.data.offset + " (Left/Right)";
+			offsetPog.text = ".     Por the Aleks e Team Silver ";
 
 			if (controls.RESET)
 					FlxG.save.data.offset = 0;
