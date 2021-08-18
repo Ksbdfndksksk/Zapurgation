@@ -1,32 +1,32 @@
-# Wii Funkin Animado
-Sim, usei o port do luckydog de base pra ver esse trem, obviamente nÈ? pra que eu iria portar de novo?...
-N„o... N„o irei traduzir isso para inglÍs se quiser traduÁ„o, jogue no google tradutor por motivos de:
+# Zapurgation 
+Sim, usei o port do luckydog de base pra ver esse trem, obviamente n√©? pra que eu iria portar de novo?...
+N√£o... N√£o irei traduzir isso para ingl√™s se quiser tradu√ß√£o, jogue no google tradutor por motivos de:
 Primeiro eu sou BR
-Segundo, eu n„o sou Gringo!!!
+Segundo, eu n√£o sou Gringo!!!
 Terceiro, esse tutorial contem coisas da Mic'd Up
-Quarto, vocÍ pode adaptar isso da forma como tu quiser
-Quinto, essa vers„o È a adaptaÁ„o da Zoiodness para PC e Mobile com trocentas correÁıes de performance, downscroll liberado, e outras cositas mas.
+Quarto, voc√™ pode adaptar isso da forma como tu quiser
+Quinto, essa vers√£o √© a adapta√ß√£o da Zoiodness para PC e Mobile com trocentas corre√ß√µes de performance, downscroll liberado, e outras cositas mas.
 
-Sexto, sim eu j· usei esse tutorial antes kkkkkk
+Sexto, sim eu j√° usei esse tutorial antes kkkkkk
 
 # Como compilar essa parada toda?
-Bom... Vou copiar e colar um trem aqui que resolve, tem mais uns adicionais, mas que eu tambÈm vou colocar aqui.
+Bom... Vou copiar e colar um trem aqui que resolve, tem mais uns adicionais, mas que eu tamb√©m vou colocar aqui.
 
-Compilar o mod te d· acesso a pasta `/source`, permitindo que vocÍ faÁa coisas legais com algo em cÛdigo aberto, ou ent„o, sua prÛpria leitura da animaÁ„o jog·vel!
+Compilar o mod te d√° acesso a pasta `/source`, permitindo que voc√™ fa√ßa coisas legais com algo em c√≥digo aberto, ou ent√£o, sua pr√≥pria leitura da anima√ß√£o jog√°vel!
 
 (I recommend having a good idea on how to program. Compiling the mod is not for everyone!) - Frase Original do cara que escreveu isso
-E eu digo que n„o nescessariamente, eu nunca vi esses trens na vida, e deu pra fazer algo legal, ent„o apenas digo: V· com forÁa meu Nobre!
+E eu digo que n√£o nescessariamente, eu nunca vi esses trens na vida, e deu pra fazer algo legal, ent√£o apenas digo: V√° com for√ßa meu Nobre!
 
-### **Se vocÍ realmente quiser compilar, continue a leitura, se n„o... VAZA!!!**
+### **Se voc√™ realmente quiser compilar, continue a leitura, se n√£o... VAZA!!!**
 
-# Instalando os programas nescess·rios
+# Instalando os programas nescess√°rios
 
-Primeiro, vocÍ precisa instalar Haxe e HaxelFlixel, FNF utilizou essa linguagem de programaÁ„o n„o me julgue, julgue o NinjaMuffin99, ou n„o nÈ...
+Primeiro, voc√™ precisa instalar Haxe e HaxelFlixel, FNF utilizou essa linguagem de programa√ß√£o n√£o me julgue, julgue o NinjaMuffin99, ou n√£o n√©...
 
-1. [Instale Haxe 4.1.5](https://haxe.org/download/version/4.1.5/) (Baixe a vers„o 4.1.5 ao invÈs da 4.2.0 ou ent„o baixe isso e corra o risco de algumas extensıes como a webm n„o funcionarem propriamente.)
+1. [Instale Haxe 4.1.5](https://haxe.org/download/version/4.1.5/) (Baixe a vers√£o 4.1.5 ao inv√©s da 4.2.0 ou ent√£o baixe isso e corra o risco de algumas extens√µes como a webm n√£o funcionarem propriamente.)
 2. [Instale HaxeFlixel](https://haxeflixel.com/documentation/install-haxeflixel/) Depois de instalar Haxe
 
-Outras paradas que tu vai precisar (Geralmente isso varia de mod pra mod, ent„o sempre leia o  `Project.xml` para saber exatamente o que baixar:
+Outras paradas que tu vai precisar (Geralmente isso varia de mod pra mod, ent√£o sempre leia o  `Project.xml` para saber exatamente o que baixar:
 ```
 flixel
 flixel-addons
@@ -37,16 +37,16 @@ newgrounds
 Para instalar basta abrir o prompt de comando e digitar: `haxelib install [library]` 
 exemplo: `haxelib install newgrounds` ou `haxelib install flixel`.
 
-VocÍ tambem vai precisar de umas coisinhas a mais: (Sim isso tudo È nescess·rio)
+Voc√™ tambem vai precisar de umas coisinhas a mais: (Sim isso tudo √© nescess√°rio)
 1. Baixe [git-scm] em (https://git-scm.com/downloads).
-2. Siga as instruÁıes da pagina.
-3. Rode o cÛdigo no cmd `haxelib git polymod https://github.com/larsiusprime/polymod.git` para instalar o Polymod.
-4. Rode o cÛdigo no cmd `haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc` para instalar Discord RPC.
-5. Optional, mas eu recomendo: - Rode o cÛdigo no cmd `haxelib git flixel-addons https://github.com/HaxeFlixel/flixel-addons` para atualizar Flixel-Addons. Foi isso que corrigiu o bug da animaÁ„o jog·vel.
+2. Siga as instru√ß√µes da pagina.
+3. Rode o c√≥digo no cmd `haxelib git polymod https://github.com/larsiusprime/polymod.git` para instalar o Polymod.
+4. Rode o c√≥digo no cmd `haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc` para instalar Discord RPC.
+5. Optional, mas eu recomendo: - Rode o c√≥digo no cmd `haxelib git flixel-addons https://github.com/HaxeFlixel/flixel-addons` para atualizar Flixel-Addons. Foi isso que corrigiu o bug da anima√ß√£o jog√°vel.
 
-Agora sim, d· pra dale, continue o tutorial.
+Agora sim, d√° pra dale, continue o tutorial.
 
-# Adding `APIStuff.hx` into `/source` (A partir de agora, n„o irei mais traduzir)
+# Adding `APIStuff.hx` into `/source` (A partir de agora, n√£o irei mais traduzir)
 
 The API keys of the mod were gitignored so no one could post fake high scores onto the leaderboards in Newgrounds. Unfortunately, because this mod requires the `API` and `EncKey` values to compile, you will need to add a file called `APIStuff.hx` into `/source`.
 
@@ -91,7 +91,7 @@ Desktop building can be a bit tedious. Each different version requires a differe
 3. Type `lime run mac -debug` to run the Mac version of the mod from the command prompt/terminal. (You can also run the mod from `funkin/export/debug/mac/bin`)
 
 ### Windows Building:
-**THIS METHOD REQUIRES AROUND 22 GIGABYTES OF STORAGE.** (SÛ voltei aqui pra dizer que sim, esses s„o os famosos 23 GIGAS QUE VOC  PRECISA BAIXAR)
+**THIS METHOD REQUIRES AROUND 22 GIGABYTES OF STORAGE.** (S√≥ voltei aqui pra dizer que sim, esses s√£o os famosos 23 GIGAS QUE VOC√ä PRECISA BAIXAR)
 1. Install [Visual Studio Community 2019](https://visualstudio.microsoft.com/downloads/).
 2. Open the installer and go to the individual workloads tab and download the following:
 ```
@@ -114,9 +114,9 @@ Desktop building can be a bit tedious. Each different version requires a differe
 5. Once everything is installed, type `lime build windows -debug` to build the windows version of the mod.
 6. Type `lime run windows -debug` after the mod is compiled to run the windows version of the mod. (You can also run the mod from `funkin/export/debug/windows/bin`)
 
-# Yay vocÍ terminou!
+# Yay voc√™ terminou!
 
 # Agradecimentos por parte do mod base deste
 - [Fizzd/Hafiz](https://twitter.com/7thbeat) Stems and allowing me to do this lol
 - [Jenny](https://twitter.com/megaminerjenny) Help wit the background effects
-- [gwebdev](https://github.com/GrowtopiaFli) Video code (Inclusive, recomendo que vocÍ passe aqui e leia sobre o webm se quiser saber mais sobre as cutscenes em vÌdeo)
+- [gwebdev](https://github.com/GrowtopiaFli) Video code (Inclusive, recomendo que voc√™ passe aqui e leia sobre o webm se quiser saber mais sobre as cutscenes em v√≠deo)
